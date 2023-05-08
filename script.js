@@ -9,7 +9,7 @@ document.addEventListener("scroll", function() {
         });
   });*/
 
-const element = document.querySelector('.golden-record');
+const element = document.querySelector('.side-picture');
 const footer = document.querySelector('footer');
 
 /**
