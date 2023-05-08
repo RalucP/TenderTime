@@ -1,10 +1,21 @@
 /***** GENERAL STYLING *****/
 
-@import url('https://fonts.cdnfonts.com/css/myriad-pro');
+@font-face {
+    font-family: MyriadPro;
+    font-weight: 100;
+    src: url("Resources/Fonts/MyriadPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: MyriadPro;
+    font-weight: bold;
+    src: url("Resources/Fonts/MyriadPro-Bold.otf") format("opentype");
+}
 
 :root{
     --dark-purple: #0D0714;
     --light-purple: #E3D6F1;
+    --main-font: "MyriadPro";
 }
 
 body{
@@ -16,7 +27,7 @@ body{
     
     background-color: var(--dark-purple);
     color: var(--light-purple);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--main-font);
 }
 
 .small-page{
@@ -30,7 +41,7 @@ body{
 }
 
 .container p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--main-font);
     font-weight: bold;
 }
 
@@ -64,7 +75,7 @@ body{
 .socials-link{
     text-decoration: none;
     color: var(--light-purple);
-    font-weight: bolder;
+    font-weight: bold;
 
     display: flex;
     flex-direction: column;
@@ -201,21 +212,46 @@ body{
 }
 
 .sub-heading{
-    margin: 3em 0 2em 0;
+    margin: 3em 0 1.2em 0;
 
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .paragraph{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--main-font);
     font-size: 15px;
-    font-weight: 200;
+    font-weight: 100;
     text-align: justify;
     text-justify: inter-word;
+    line-height: 200%;
 }
 
 /***** MAIN BODY *****/
+
+/***** ABOUT PAGE *****/
+
+.team-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 80%;
+
+    margin-bottom: 20%;
+}
+
+.team-flex-column{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.team-flex-column .paragraph{
+    margin: 0;
+}
+
+/***** ABOUT PAGE *****/
 
 /***** AR PAGE *****/
 
@@ -306,7 +342,7 @@ body{
 
 .footer .socials-link{
     color: var(--dark-purple);
-    font-weight: lighter;
+    font-weight: 100;
 }
 
 .footer .icons{
