@@ -12,10 +12,16 @@
     src: url("Resources/Fonts/MyriadPro-Bold.otf") format("opentype");
 }
 
+@font-face {
+    font-family: BigCaslon;
+    src: url("Resources/Fonts/Big-Caslon-Medium.ttf") format("truetype");
+}
+
 :root{
     --dark-purple: #0D0714;
     --light-purple: #E3D6F1;
     --main-font: "MyriadPro";
+    --title-font: "BigCaslon";
 }
 
 body{
@@ -236,7 +242,7 @@ body{
     margin-block-start: 1.5em;
     margin-block-end: 0;
 
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--title-font);
     font-size: 64px;
     font-weight: 100;
 }
