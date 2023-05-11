@@ -11,6 +11,7 @@ document.addEventListener("scroll", function() {
 
 const element = document.querySelector('.side-picture');
 const footer = document.querySelector('footer');
+const header = document.querySelector('header');
 
 /**
  * Return `num` normalized to 0..1 in range min..max.
@@ -38,6 +39,22 @@ if (num > 1) return max;
 return num * (max - min) + min;
 }
 
+function addNavigationBar(){
+  fetch("nav-bar.html")
+  .then(response => response.text())
+  .then(data => {
+    header.innerHTML = data;
+  });
+}
+
+function addFooter(){
+  fetch("footer.html")
+  .then(response => response.text())
+  .then(data => {
+    footer.innerHTML = data;
+  });
+}
+
 
 window.addEventListener('scroll', () =>{
   const scrollBottomPosition = window.scrollY + window.innerHeight;
@@ -62,3 +79,6 @@ window.addEventListener('scroll', () =>{
     }
   }
 });
+
+addNavigationBar();
+addFooter();
