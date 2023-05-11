@@ -227,6 +227,10 @@ body{
     padding: 0 19% 10% 32%;
 }
 
+.first-text{
+    margin-top: 12em;
+}
+
 .title:nth-child(1){
     margin-block-start: 3em;
 }
@@ -350,17 +354,22 @@ body{
     flex-direction: row;
     justify-content: space-between;
 
-    width: 80%;
+    width: 100%;
 }
 
 .team-flex-column{
     display: flex;
     flex-direction: column;
-    row-gap: 1em;
+    row-gap: 0.5em;
+    width: 50%;
 }
 
 .team-flex-column .paragraph{
     margin: 0;
+}
+
+.small{
+    font-size: 17px;
 }
 
 /***** ABOUT PAGE *****/
