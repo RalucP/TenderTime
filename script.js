@@ -47,16 +47,18 @@ window.addEventListener('scroll', () =>{
   const maxScroll = document.body.offsetHeight - window.innerHeight;
   const normalizedScrollHeight = scale(window.scrollY, 0, maxScroll);
 
-  //the disk changes its rotation based on how much of the page has been scrolled
-  element.style.transform = `translateX(-40%) rotate(${normalizedScrollHeight * 180}deg)`;
+  if(element){
+    //the disk changes its rotation based on how much of the page has been scrolled
+    element.style.transform = `translateX(-40%) rotate(${normalizedScrollHeight * 180}deg)`;
 
-  //If the footer is visible, the disk changes its position based on how much of the footer is visible
-  // and stops moving with the scroll
-  if (scrollBottomPosition >= footerPosition) {
-    element.style.bottom = footerVisibleHeight + 30 + 'px';
-    element.style.top = 'auto';
-  } else {
-    element.style.top =  '25%';
-    element.style.bottom = 'auto';
+    //If the footer is visible, the disk changes its position based on how much of the footer is visible
+    // and stops moving with the scroll
+    if (scrollBottomPosition >= footerPosition) {
+      element.style.bottom = footerVisibleHeight + 30 + 'px';
+      element.style.top = 'auto';
+    } else {
+      element.style.top =  '25%';
+      element.style.bottom = 'auto';
+    }
   }
 });

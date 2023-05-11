@@ -100,23 +100,14 @@ body{
     margin: 0;
 }
 
-/* 
-
-.ellipses{
-    height: 515px;
-    aspect-ratio: 1/1;
-
-    position: absolute;
-    right: -10%;
-    top: 70vh;
-}
-
-*/
-
 .ellipses-1{
     position: absolute;
     right: -7%;
     top: 80vh;
+
+    z-index: -1;
+
+    height: 100%;
 }
 
 .ellipse{
@@ -139,6 +130,8 @@ body{
     position: absolute;
     left: 15%;
     top: 165vh;
+
+    z-index: -1;
 }
 
 .ellipses-2 .ellipse, .ellipses-3 .ellipse{
@@ -149,6 +142,8 @@ body{
     position: absolute;
     right: 13%;
     top: 270vh;
+
+    z-index: -1;
 }
 
 .ellipses-3 .ellipse:nth-child(1){
@@ -264,6 +259,91 @@ body{
 }
 
 /***** MAIN BODY *****/
+
+/***** STORIES PAGE *****/
+
+.stories-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 7%;
+}
+
+.stories-flex a{
+    text-decoration: none;
+    color: var(--light-purple);
+}
+
+.stories{
+    height: 10rem;
+    padding: 3rem;
+    aspect-ratio: 1/1;
+    border: 1px dashed var(--light-purple);
+    border-radius: 50%;
+    background-color: var(--dark-purple);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    margin: 1%;
+
+    text-align: center;
+}
+
+.stories:nth-child(even){
+    height: 5rem;
+    padding: 3rem;
+
+    font-size: 80%;
+}
+
+.stories:nth-child(3n+2){
+    margin-top: -20%;
+}
+
+.stories:nth-child(3n+3){
+    margin-top: -7%;
+}
+
+.stories:nth-last-child(-n+1){
+    height: 10rem;
+
+    margin-top: -15%;
+}
+
+.stories:hover{
+    background-color: var(--light-purple);
+    color: var(--dark-purple);
+}
+
+.stories .title{
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 95%;
+
+    margin: 1% 0;
+}
+
+.stories .author{
+    font-size: 90%;
+    letter-spacing: normal;
+
+    margin: 1% 0;
+}
+
+.author{
+    font-family: var(--title-font);
+
+    letter-spacing: 0.1em;
+}
+
+/***** STORIES PAGE *****/
 
 /***** ABOUT PAGE *****/
 
