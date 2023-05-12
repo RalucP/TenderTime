@@ -40,15 +40,16 @@ return num * (max - min) + min;
 }
 
 function addNavigationBar(){
-  fetch("nav-bar.html")
+  fetch("/nav-bar.html")
   .then(response => response.text())
   .then(data => {
     header.innerHTML = data;
+    console.log(data);
   });
 }
 
 function addFooter(){
-  fetch("footer.html")
+  fetch("/footer.html")
   .then(response => response.text())
   .then(data => {
     footer.innerHTML = data;

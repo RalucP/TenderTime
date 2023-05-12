@@ -36,6 +36,13 @@ body{
     font-family: var(--main-font);
 }
 
+#content{
+    padding-bottom: 270px;
+    position: relative;
+
+    overflow: hidden;
+}
+
 .small-page{
     height: 80vh;
 }
@@ -420,13 +427,26 @@ body{
 /***** FOOTER *****/
 
 .footer{
+    position: absolute;
+    bottom: 0;
+
     height: 270px;
+    width: 100%;
 
     background-color: var(--light-purple);
     color: var(--dark-purple);
 
     padding: 2% 10%;
+
 }
+
+/* 
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+*/
 
 .footer-grid{
     display: grid;
