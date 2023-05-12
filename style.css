@@ -957,6 +957,14 @@ a{
         height: 4rem;
         width: 4rem;
     }
+
+    .stories .title{
+        font-size: 60%;
+    }
+
+    .stories .author{
+        font-size: 50%;
+    }
 }
 
 /***** MEDIA QUERIES *****/
