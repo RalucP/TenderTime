@@ -267,6 +267,10 @@ body{
     line-height: 200%;
 }
 
+a{
+    color: var(--light-purple);
+}
+
 /***** MAIN BODY *****/
 
 /***** STORIES PAGE *****/
