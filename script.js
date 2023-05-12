@@ -12,6 +12,8 @@ document.addEventListener("scroll", function() {
 const element = document.querySelector('.side-picture');
 const footer = document.querySelector('footer');
 const header = document.querySelector('header');
+let menuButtons;
+
 
 /**
  * Return `num` normalized to 0..1 in range min..max.
@@ -68,7 +70,7 @@ window.addEventListener('scroll', () =>{
   const maxScroll = document.body.offsetHeight - window.innerHeight;
   const normalizedScrollHeight = scale(window.scrollY, 0, maxScroll);
 
-  const mobileVersion = window.matchMedia("(max-width: 850px)");
+  const mobileVersion = window.matchMedia("(max-width: 800px)")
 
   if(element){
     //the disk changes its rotation based on how much of the page has been scrolled
