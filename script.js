@@ -70,7 +70,7 @@ window.addEventListener('scroll', () =>{
   const maxScroll = document.body.offsetHeight - window.innerHeight;
   const normalizedScrollHeight = scale(window.scrollY, 0, maxScroll);
 
-  const mobileVersion = window.matchMedia("(max-width: 800px)");
+  const mobileVersion = window.matchMedia("(max-width: 850px)");
 
   if(element){
     //the disk changes its rotation based on how much of the page has been scrolled
@@ -103,9 +103,9 @@ addNavigationBar().then(() => {
   const burgerButton = header.querySelector('.burger-button');
   const menuButtons = header.querySelector(".nav-bar-button-flex");
 
-  const mobileVersion = window.matchMedia("(max-width: 800px)");
-
-  if(mobileVersion.matches){
+  const mobileVersion = window.matchMedia("(max-width: 850px)");
+  
+  if(!mobileVersion.matches){
     menuButtons.style.display = 'flex';
   }
   else{
