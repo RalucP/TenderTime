@@ -12,6 +12,8 @@ document.addEventListener("scroll", function() {
 const element = document.querySelector('.side-picture');
 const footer = document.querySelector('footer');
 const header = document.querySelector('header');
+let menuButtons;
+
 
 /**
  * Return `num` normalized to 0..1 in range min..max.
@@ -39,20 +41,24 @@ if (num > 1) return max;
 return num * (max - min) + min;
 }
 
-function addNavigationBar(){
-  fetch("/nav-bar.html")
-  .then(response => response.text())
-  .then(data => {
-    header.innerHTML = data;
-  });
+async function addNavigationBar(){
+  if(header){
+    const feedback = await fetch("/nav-bar.html")
+    .then(response => response.text())
+    .then(data => {
+      header.innerHTML = data;
+    });
+  }
 }
 
 function addFooter(){
-  fetch("/footer.html")
-  .then(response => response.text())
-  .then(data => {
-    footer.innerHTML = data;
-  });
+  if(footer){
+    fetch("/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      footer.innerHTML = data;
+    });
+  }
 }
 
 
@@ -64,21 +70,45 @@ window.addEventListener('scroll', () =>{
   const maxScroll = document.body.offsetHeight - window.innerHeight;
   const normalizedScrollHeight = scale(window.scrollY, 0, maxScroll);
 
+  const mobileVersion = window.matchMedia("(max-width: 800px)")
+
   if(element){
     //the disk changes its rotation based on how much of the page has been scrolled
-    element.style.transform = `translateX(-40%) rotate(${normalizedScrollHeight * 180}deg)`;
+    element.style.transform = `rotate(${normalizedScrollHeight * 180}deg)`;
 
     //If the footer is visible, the disk changes its position based on how much of the footer is visible
     // and stops moving with the scroll
-    if (scrollBottomPosition >= footerPosition) {
-      element.style.bottom = footerVisibleHeight + 30 + 'px';
-      element.style.top = 'auto';
-    } else {
-      element.style.top =  '25%';
-      element.style.bottom = 'auto';
+    if(mobileVersion.matches){
+      if (scrollBottomPosition >= footerPosition) {
+        element.style.bottom = footerVisibleHeight + 30 + 'px';
+        element.style.top = 'auto';
+      } else {
+        element.style.top =  'auto';
+        element.style.bottom = '0';
+      }
+    }
+    else{
+      if (scrollBottomPosition >= footerPosition) {
+        element.style.bottom = footerVisibleHeight + 30 + 'px';
+        element.style.top = 'auto';
+      } else {
+        element.style.top =  '25%';
+        element.style.bottom = 'auto';
+      }
     }
   }
 });
 
-addNavigationBar();
+addNavigationBar().then(() => {
+  const burgerButton = header.querySelector('.burger-button');
+  const menuButtons = header.querySelector(".nav-bar-button-flex");
+  burgerButton.addEventListener('pointerdown', () => {
+    if(menuButtons.style.display == 'flex'){
+      menuButtons.style.display = 'none'
+    }
+    else{
+      menuButtons.style.display = 'flex'
+    }
+  });
+});
 addFooter();

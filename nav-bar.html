@@ -1,7 +1,17 @@
 <nav class="nav-bar">
-    <a href="/home" class="nav-bar-logo">
-        <img class="logo" src="/Resources/tender_time_logo.png" alt="tender time">
-    </a>
+    <div class="burger-menu">
+        <button id="burger-button" class="burger-button">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        <a href="/home" class="nav-bar-logo">
+            <picture>
+                <source media="(max-width: 800px)" srcset="/Resources/tender_time_logo_dark.png">
+                <img class="logo" src="/Resources/tender_time_logo.png" alt="tender time">
+            </picture>
+        </a>
+    </div>
     <div class="nav-bar-button-flex">
         <a href="/home" class="nav-bar-buttons">Home</a>
         <a href="/installation" class="nav-bar-buttons">Installation</a>
