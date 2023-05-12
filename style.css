@@ -688,6 +688,12 @@ a{
     }
 }
 
+@media (min-width: 850px){
+    .nav-bar-button-flex{
+        display: flex;
+    }
+}
+
 @media (max-width: 850px){
 
     /**************** NAVIGATION BAR ****************/
