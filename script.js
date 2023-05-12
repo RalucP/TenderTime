@@ -44,7 +44,6 @@ function addNavigationBar(){
   .then(response => response.text())
   .then(data => {
     header.innerHTML = data;
-    console.log(data);
   });
 }
 
