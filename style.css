@@ -930,6 +930,14 @@ a{
         height: 6rem;
         width: 6rem;
     }
+
+    .stories .title{
+        font-size: 60%;
+    }
+
+    .stories .author{
+        font-size: 50%;
+    }
 }
 
 @media (max-width: 400px){
