@@ -70,7 +70,7 @@ window.addEventListener('scroll', () =>{
   const maxScroll = document.body.offsetHeight - window.innerHeight;
   const normalizedScrollHeight = scale(window.scrollY, 0, maxScroll);
 
-  const mobileVersion = window.matchMedia("(max-width: 800px)")
+  const mobileVersion = window.matchMedia("(max-width: 800px)");
 
   if(element){
     //the disk changes its rotation based on how much of the page has been scrolled
@@ -102,13 +102,21 @@ window.addEventListener('scroll', () =>{
 addNavigationBar().then(() => {
   const burgerButton = header.querySelector('.burger-button');
   const menuButtons = header.querySelector(".nav-bar-button-flex");
-  burgerButton.addEventListener('pointerdown', () => {
-    if(menuButtons.style.display == 'flex'){
-      menuButtons.style.display = 'none'
-    }
-    else{
-      menuButtons.style.display = 'flex'
-    }
-  });
+
+  const mobileVersion = window.matchMedia("(max-width: 800px)");
+
+  if(mobileVersion.matches){
+    menuButtons.style.display = 'flex';
+  }
+  else{
+    burgerButton.addEventListener('pointerdown', () => {
+      if(menuButtons.style.display == 'flex'){
+        menuButtons.style.display = 'none';
+      }
+      else{
+        menuButtons.style.display = 'flex';
+      }
+    });
+  }
 });
 addFooter();
