@@ -13,15 +13,15 @@
 }
 
 @font-face {
-    font-family: BigCaslon;
-    src: url("Resources/Fonts/Big-Caslon-Medium.ttf") format("truetype");
+    font-family: CormorantGaramond;
+    src: url("Resources/Fonts/CormorantGaramond-Medium.ttf") format("truetype");
 }
 
 :root{
     --dark-purple: #0D0714;
     --light-purple: #E3D6F1;
     --main-font: "MyriadPro";
-    --title-font: "BigCaslon";
+    --title-font: "CormorantGaramond";
 }
 
 body{
@@ -345,7 +345,6 @@ a{
 
 .stories .author{
     font-size: 90%;
-    letter-spacing: normal;
 
     margin: 1% 0;
 }
@@ -440,17 +439,9 @@ a{
     background-color: var(--light-purple);
     color: var(--dark-purple);
 
-    padding: 2% 10%;
+    padding: 2% 5%;
 
 }
-
-/* 
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-*/
 
 .footer-grid{
     display: grid;
