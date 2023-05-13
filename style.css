@@ -694,7 +694,7 @@ a{
     }
 }
 
-@media (max-width: 850px){
+@media (max-width: 853px){
 
     /**************** NAVIGATION BAR ****************/
     .nav-bar{
@@ -958,20 +958,65 @@ a{
     .stories:nth-child(even){
         height: 2rem;
         width: 2rem;
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .stories:nth-last-child(-n+1){
         height: 4rem;
         width: 4rem;
+        margin: -9%;
     }
 
     .stories .title{
-        font-size: 60%;
+        font-size: 40%;
     }
 
     .stories .author{
-        font-size: 50%;
+        font-size: 40%;
+    }
+}
+
+@media (max-height: 400px){
+    .side-picture{
+        translate: -60% 0%;
+        width: 30%;
+    }
+
+    #content{
+        padding-bottom: 70%;
+    }
+
+    .small-page{
+        padding-bottom: 10%;
+    }
+
+    .social-media-flex{
+        row-gap: 10%;
+    }
+
+    .main-body{
+        padding-left: 20%;
+    }
+
+    .stories{
+        height: 4rem;
+    }
+
+    .stories:nth-child(even){
+        height: 2.5rem;
+    }
+
+    .stories:nth-last-child(-n+1){
+        height: 4rem;
+
+        margin-top: -9%;
+    }
+}
+
+@media (max-height: 380px) {
+    .social-media-flex{
+        display: flex !important;
+        padding: 0;
     }
 }
 
