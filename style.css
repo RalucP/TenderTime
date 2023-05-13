@@ -976,7 +976,7 @@ a{
     }
 }
 
-@media (max-width: 300px){
+@media only screen and (max-width: 400px){
     .stories{
         height: 4rem;
         padding: 1rem;
