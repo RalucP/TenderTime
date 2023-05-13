@@ -164,7 +164,7 @@ body{
 /***** NAVIGATION BAR *****/
 
 .nav-bar{
-    padding: 2% 6% 1% 6%;
+    padding: 1% 6% 1% 6%;
 
     position: fixed;
     top: 0;
@@ -224,22 +224,111 @@ body{
 
 /***** ANIMATION & LANDING *****/
 
-.golden-record-landing{
-    padding: 15px 0;
+.landing-page{
+    position: relative;
+    padding-top:10%;
+    height: 80vh;
+    overflow: hidden;
+}
 
-    width: 42%;
+.image-landing{
+    width: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+    position: fixed;
+    top: 60%;
+    left: 25%;
+
+    animation: landing-animation-image 2s linear;
+    animation-delay: 1.5s;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 0 25%;
+
+    animation: text-animation 1s linear;
+    animation-delay: 1.5s;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+.display-none{
+    display: none;
+}
+
+.text .title:nth-child(1){
+    margin-block-start: 0em;
+}
+
+@keyframes landing-animation-image {
+    0%{
+        width: 50%;
+        top: 60%;
+        left: 25%;
+        transform: rotate(0deg);
+    }
+    50%{
+        width: 35%;
+        top: 20%;
+        left: 32%;
+        transform: rotate(180deg);
+    }
+    100%{
+        top: 25%;
+        left: 0;
+        transform: translateX(-40%) rotate(360deg);
+        width: 35%;
+    }
+}
+
+@keyframes text-animation{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.landing-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.golden-record-landing-1{
+    position: absolute;
+    top: 350px;
+
+    width: 55%;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
 
-.animated{
-    margin: 0;
-    padding: 0;
+.golden-record-landing{
+    padding: 8% 0 0 0;
 
-    animation: roll 2s linear;
-    transform-origin: center;
-    animation-fill-mode: forwards;
+    width: 37%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
+
+
 
 @keyframes roll {
     0% { 
@@ -950,33 +1039,6 @@ a{
         padding: 6%;
     }
 
-    .stories{
-        height: 4rem;
-        padding: 1rem;
-    }
-
-    .stories:nth-child(even){
-        height: 2rem;
-        width: 2rem;
-        padding: 1.5rem;
-    }
-
-    .stories:nth-last-child(-n+1){
-        height: 4rem;
-        width: 4rem;
-        margin: -9%;
-    }
-
-    .stories .title{
-        font-size: 40%;
-    }
-
-    .stories .author{
-        font-size: 35%;
-    }
-}
-
-@media only screen and (max-width: 400px){
     .stories{
         height: 4rem;
         padding: 1rem;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module"></script>
+    <title>Tender Time | Medea Lab</title>
+</head>
+<body>
+    <header></header>
+    <section class="landing-page">
+        <div class="text">
+            <h2 class="title">TENDER TIME</h2>
+            <p class="paragraph">
+                Tender Time is a collaborative artistic research project conducted by the Medea Lab, Malmö University, 
+                Sweden. Taking the Voyager space mission and its Golden Record as a point of departure, Medea Lab 
+                invites you to explore the vulnerabilities that continue to haunt our current moment of continuous 
+                planetary crisis, our own tender time. 
+            </p>
+        </div>
+        <img src="/Resources/golden_record.png" alt="" class="image-landing">
+    </section>
+    <script>
+        const mobileVersion = window.matchMedia("(max-width: 920px)");
+        let timeout = 3500;
+        
+        if(mobileVersion.matches){
+            const landingPage = document.querySelector('.landing-page');
+            landingPage.style.display = 'none';
+            timeout = 10;
+        }
+
+        window.setTimeout(function(){
+
+            // Move to a new location or you can do something else
+            window.location.href = "/home";
+
+        }, timeout);
+    </script>
+</body>
+</html>

@@ -1,14 +1,3 @@
-/*const content = document.querySelector("#content");
-
-// When the user scrolls, check if they've reached the end of the first section
-document.addEventListener("scroll", function() {
-      fetch("index2.html")
-        .then(response => response.text())
-        .then(data => {
-          content.innerHTML = data;
-        });
-  });*/
-
 const element = document.querySelector('.side-picture');
 const footer = document.querySelector('footer');
 const header = document.querySelector('header');
@@ -105,10 +94,12 @@ addNavigationBar().then(() => {
 
   const mobileVersion = window.matchMedia("(max-width: 850px)");
   
-  if(!mobileVersion.matches){
+  //if(!mobileVersion.matches)
+  {
     menuButtons.style.display = 'flex';
   }
-  else{
+  //else
+  {
     burgerButton.addEventListener('pointerdown', () => {
       if(menuButtons.style.display == 'flex'){
         menuButtons.style.display = 'none';
