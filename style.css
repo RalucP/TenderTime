@@ -976,6 +976,33 @@ a{
     }
 }
 
+@media (max-width: 300px){
+    .stories{
+        height: 4rem;
+        padding: 1rem;
+    }
+
+    .stories:nth-child(even){
+        height: 2rem;
+        width: 2rem;
+        padding: 1.5rem;
+    }
+
+    .stories:nth-last-child(-n+1){
+        height: 4rem;
+        width: 4rem;
+        margin: -9%;
+    }
+
+    .stories .title{
+        font-size: 40%;
+    }
+
+    .stories .author{
+        font-size: 35%;
+    }
+}
+
 @media (max-height: 400px){
     .side-picture{
         translate: -60% 0%;
