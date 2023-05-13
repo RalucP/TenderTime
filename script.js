@@ -94,11 +94,11 @@ addNavigationBar().then(() => {
 
   const mobileVersion = window.matchMedia("(max-width: 850px)");
   
-  //if(!mobileVersion.matches)
+  if(!mobileVersion.matches)
   {
     menuButtons.style.display = 'flex';
   }
-  //else
+  else
   {
     burgerButton.addEventListener('pointerdown', () => {
       if(menuButtons.style.display == 'flex'){
