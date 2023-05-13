@@ -68,6 +68,12 @@ body{
     object-fit: cover;
 
     translate: -40% 0%;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .side-paper{
@@ -222,6 +228,23 @@ body{
 
 /***** NAVIGATION BAR *****/
 
+/***** INSTALLATION PAGE *****/
+
+.image .paragraph{
+    text-align: center;
+    font-size: 70%;
+}
+
+.installation-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    object-fit: cover;
+}
+
+/***** INSTALLATION PAGE *****/
+
 /***** ANIMATION & LANDING *****/
 
 .landing-page{
@@ -262,10 +285,6 @@ body{
     animation-fill-mode: forwards;
 }
 
-.display-none{
-    display: none;
-}
-
 .text .title:nth-child(1){
     margin-block-start: 0em;
 }
@@ -297,45 +316,6 @@ body{
     }
     100%{
         opacity: 0;
-    }
-}
-
-.landing-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    height: 100vh;
-
-    overflow: hidden;
-}
-
-.golden-record-landing-1{
-    position: absolute;
-    top: 350px;
-
-    width: 55%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-.golden-record-landing{
-    padding: 8% 0 0 0;
-
-    width: 37%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-
-
-@keyframes roll {
-    0% { 
-        transform: translateX(0%) rotate(0deg);
-    }
-    100%{
-        transform: translateX(-125%) rotate(360deg);
     }
 }
 
