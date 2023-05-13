@@ -999,17 +999,19 @@ a{
     }
 
     .stories{
-        height: 4rem;
+        height: 7rem;
     }
 
     .stories:nth-child(even){
-        height: 2.5rem;
+        height: 5rem;
+        width: 5rem;
     }
 
     .stories:nth-last-child(-n+1){
-        height: 4rem;
+        height: 7rem;
+        width: 7rem;
 
-        margin-top: -9%;
+        margin-top: -10%;
     }
 }
 
