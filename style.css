@@ -494,14 +494,6 @@ a{
     align-items: center;
 }
 
-.presentation-pic-container{
-    width: 60vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .AR-presentation-pic{
     height: 95vh;
     object-fit: cover;
@@ -894,6 +886,22 @@ a{
         height: 80vh;
     }
 
+    /**************** AR PAGE ****************/
+
+    .container{
+        flex-direction: column;
+        padding: 25% 10%;
+    }
+
+    .AR-presentation-pic{
+        height: 75vh;
+    }
+
+    .credits ul{
+        width: 75vw;
+        padding: 0;
+    }
+
     /**************** FOOTER ****************/
 
     .footer{
@@ -1024,6 +1032,10 @@ a{
 }
 
 @media (max-width: 400px){
+
+    .container{
+        padding: 40% 10%;
+    }
 
     #content{
         padding-bottom: 190%;
