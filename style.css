@@ -1038,7 +1038,7 @@ a{
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 403px){
 
     .container{
         padding: 40% 10%;
@@ -1058,9 +1058,9 @@ a{
     }
 
     .stories:nth-child(even){
-        height: 2em;
-        width: 2em;
-        padding: 1.5em;
+        height: 3rem;
+        width: 3rem;
+        padding: 1.5rem;
     }
 
     .stories:nth-last-child(-n+1){
@@ -1075,6 +1075,26 @@ a{
 
     .stories .author{
         font-size: 25%;
+    }
+}
+
+@media (max-width: 354px){
+
+    .stories{
+        height: 3rem;
+        padding: 1rem;
+    }
+
+    .stories:nth-child(even){
+        height: 3rem;
+        width: 3rem;
+        padding: 1.5rem;
+    }
+
+    .stories:nth-last-child(-n+1){
+        height: 3rem;
+        width: 3rem;
+        margin: -7%;
     }
 }
 
