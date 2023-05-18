@@ -67,7 +67,7 @@ body{
     aspect-ratio: 1/1;
     object-fit: cover;
 
-    translate: -40% 0%;
+    translate: -45% 0%;
 
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
@@ -604,7 +604,7 @@ a{
 
     .side-picture{
         width: 35%;
-        translate: -55% 0%;
+        translate: -65% 0%;
     }
 
     .stories{
@@ -634,7 +634,7 @@ a{
 
     .side-picture{
         width: 35%;
-        translate: -55% 0%;
+        translate: -65% 0%;
     }
 
     .stories{
