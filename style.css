@@ -604,6 +604,7 @@ a{
 
     .side-picture{
         width: 40%;
+        translate: -40% 0%;
     }
 
     .stories{
@@ -633,6 +634,7 @@ a{
 
     .side-picture{
         width: 40%;
+        translate: -40% 0%;
     }
 
     .stories{
