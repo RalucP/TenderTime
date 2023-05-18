@@ -603,8 +603,8 @@ a{
     }
 
     .side-picture{
-        width: 40%;
-        translate: -40% 0%;
+        width: 35%;
+        translate: -55% 0%;
     }
 
     .stories{
@@ -633,8 +633,8 @@ a{
 @media (min-width: 2000px) and (max-width: 2500px){
 
     .side-picture{
-        width: 40%;
-        translate: -40% 0%;
+        width: 35%;
+        translate: -55% 0%;
     }
 
     .stories{
