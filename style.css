@@ -24,6 +24,11 @@
     --title-font: "CormorantGaramond";
 }
 
+
+iframe{
+  aspect-ratio: 16/9;
+}
+
 body{
     margin: 0;
     padding: 0;
